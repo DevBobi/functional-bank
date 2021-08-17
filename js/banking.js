@@ -35,15 +35,15 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     const withdrawInput = document.getElementById('withdraw-input');
 
     const withdrawInputText = withdrawInput.value;
-    const withdrawAmount = parseFloat(withdrawInputText);
+    const withdrawInputAmount = parseFloat(withdrawInputText);
 
     // get withdraw total 
     const withdrawTotal = document.getElementById('withdraw-total');
 
     const withdrawTotalText = withdrawTotal.innerText;
-    const previoudWithdrawTotal = parseFloat(withdrawTotalText);
+    const withdrawAmount = parseFloat(withdrawTotalText);
 
-    withdrawTotal.innerText = previoudWithdrawTotal + withdrawAmount;
+    withdrawTotal.innerText = withdrawAmount + withdrawInputAmount;
 
     // clear inputfeild
     withdrawInput.value = '';
@@ -51,9 +51,9 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     // get update withdraw with main balance 
     const balanceTotal = document.getElementById('balance-total');
     const balanceTotalText = balanceTotal.innerText;
-    const previousBalanceTotal = parseFloat(balanceTotalText);
+    const previousBalanceAmount = parseFloat(balanceTotalText);
 
-    balanceTotal.innerText = previousBalanceTotal - withdrawAmount;
+    balanceTotal.innerText = previousBalanceAmount - withdrawAmount;
 
 
 
